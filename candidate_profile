@@ -1,0 +1,30 @@
+<head>
+      <link rel="stylesheet" href="cand_profilecss.css">
+    </head>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="title text-center">
+          <h1>Manish Tummala</h1>
+          <h3>Software Engineer</h3>         
+    
+          <ul class="list-inline">
+            
+          </ul>
+        </div>
+        
+        <!-- summary section -->
+        <div class="summary">
+          <h2 class="text-center">Profile</h2>
+          <p>Here, you can check your currrent project, your details and your current status.</p>
+          
+          <div class="row">
+            <div class="col-md-3 col-sm-3">
+              <p><b>DOB;</b> 08/27/1995</p>
+              <p><b>Current Client:</b> Northern Trust Bank</p>
+              <p><b>Current Location:</b> Chicago IL</p>
+              <p><b>Email ID:</b> manisht2@hexaware.com</p>
+              <p><b>Phone Number:</b> (602)427-7876</p>
+              <p><b>Project End date:</b> 9/20/2020</p>
+              <button type="submit">Application Status</button>
+            </div>
