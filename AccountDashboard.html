@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Accounts | Dashboard </title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+
+</head>
+<body  class="hold-transition skin-blue">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header col-sm-3">
+            <a class="navbar-brand" href="#"><b>R</b>ecruitment <b>M</b>anagement <b>S</b>ystem </a>
+        </div>
+        <div class="col-sm-3 ">
+            <nav class="navbar navbar-static-top pull-right">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown user user-menu">
+                        <a href="">
+                            <span class="hidden-xs">Welcome  username</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li class="dropdown user user-menu">
+                        <a href="logout.php">
+                            <span class="hidden-xs">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+<!-- This is accounts dashboard page.-->
+<br>
+<div class="container">
+
+    <div class="row">
+        <div class="col-2">
+        </div>
+        <div class="col-8 text-center">
+        </div>
+        <div class="col-2">
+            <a href=" " class="btn btn-success"> Raise New Request </a>
+        </div>
+    </div>
+
+    <div class="box-header with-border">
+        <h2 class="box-title"><strong>List of Undergoing Projects</strong></h2>
+    </div>
+    <br/>
+    <div id="box-body">
+        <div class="row">
+            <table class="table table-bordered table-hover dataTable pull-center">
+
+                <colgroup>
+                    <col span="1" style="width: 2%;">
+                    <col span="1" style="width: 20%;">
+                    <col span="1" style="width: 50%;">
+                    <col span="1" style="width: 20%;">
+                    <col span="1" style="width: 8%;">
+                </colgroup>
+
+                <thead>
+                <tr>
+                    <th style="text-align: center;">Sl.No</th>
+                    <th style="text-align: center;">Project Name</th>
+                    <th style="text-align: center;">Description</th>
+                    <th style="text-align: center;">End Date</th>
+                    <th style="text-align: right;">Action</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr class="odd gradeX" align="justify">
+                    <td >1</td>
+                    <td>Canteen Management</td>
+                    <td>Developing a system for the canteen at different Hexaware locations.</td>
+                    <td>September 20, 2022</td>
+                    <td style="float: right"><a href=" " class="btn btn-primary"> View </a> </td>
+
+                </tr>
+
+                <tr class="odd gradeX" align="justify">
+                    <td >2</td>
+                    <td>Recruitment Management System</td>
+                    <td>Developing a system for the managing candidates flow inside Hexaware.</td>
+                    <td>July 20, 2024</td>
+                    <td style="float: right"><a href=" " class="btn btn-primary"> View </a> </td>
+
+                </tr>
+
+                <tr class="odd gradeX" align="justify">
+                    <td >3</td>
+                    <td>Training Management</td>
+                    <td>Developing a system for new recruits during their training phase until they are deployed into a project.</td>
+                    <td>December 20, 2019</td>
+                    <td style="float: right"><a href=" " class="btn btn-primary"> View </a> </td>
+
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
