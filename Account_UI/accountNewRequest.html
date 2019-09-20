@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Accounts | New Request </title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+
+</head>
+<body  class="hold-transition skin-blue">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header col-sm-3">
+            <a class="navbar-brand" href="#"><b>R</b>ecruitment <b>M</b>anagement <b>S</b>ystem </a>
+        </div>
+        <div class="col-sm-3 ">
+            <nav class="navbar navbar-static-top pull-right">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown user user-menu">
+                        <a href="">
+                            <span class="hidden-xs">Welcome  username</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li class="dropdown user user-menu">
+                        <a href="logout.php">
+                            <span class="hidden-xs">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+<!-- This is accounts dashboard page.-->
+<br>
+<div class="container">
+
+    <div class="row">
+        <div class="col-2">
+        </div>
+        <div class="col-8 text-center">
+        </div>
+        <div class="col-2">
+            <a href=" " class="btn btn-success"> Raise New Request </a>
+        </div>
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="container">
+            <br>
+            <div class="box-header with-border">
+                <h6 class="box-title"><strong>Please Create a New Request</strong></h6>
+            </div>
+            <!-- form start -->
+            <form role="form" method="post" id="requestRequestForm" name="request_insert">
+                <div class="box-body">
+                    <div class="form-group">
+                        <label for="requirementId">Requirement Id<strong>*</strong></label>
+                        <input type="text" class="form-control" id="requirementId" name = "requirement"  placeholder="Enter Requirement Id" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="jobTitle">Job Title<strong>*</strong></label>
+                        <input type="text" class="form-control" id="jobTitle" name = "title"  placeholder="Enter Job Title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="experience_required">Experience Required<strong>*</strong></label>
+                        <input type="number" min="0.00" step="0.5" class="form-control" id="experience_required" name = "experience"  placeholder="Enter the required experience" required>
+                    </div>
+
+                    <!-- Select multiple-->
+                    <div class="form-group">
+                        <label>Select Technologies required for the Project<strong>*</strong></label>
+                        <br/>Hold down the Ctrl (windows) / Command (Mac) button to select multiple options.
+                        <select multiple class="form-control" name = "dev"  id="technology_list" multiple='multiple' required>
+
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comment">Comment<strong>*</strong></label>
+                        <input type="text" class="form-control" id="comment" name = "comment"  placeholder="Enter additional comment" required>
+                    </div>
+                </div><!-- /.box-body -->
+                <input type="hidden" class="form-control" name = "action" value="request_candidate">
+                <div class="box-footer">
+                    <button type="submit" class="btn btn-primary">Request Candidate</button>
+                    <button type="reset" class="btn btn-danger pull-right">Reset Data</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
