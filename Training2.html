@@ -11,14 +11,38 @@
 
   </head>
   <body>
-   <nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#"><b>R</b>ecruitment <b>M</b>anagement <b>S</b>ystem </a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+     <div class="container-fluid">
+         <div class="navbar-header col-sm-3">
+             <div class="col-sm-4 pull-right">
+                 <a href="index.html"><img src="https://hexaware.com/wp-content/themes/hexaware-main/images/logo.png" style="width:100px; height:50px" alt="hexaware logo"></a>
+             </div>
+             <div class="col-sm-3 pull-right">
+                 <a class="navbar-brand" href="index.html"><b>R</b>ecruitment <b>M</b>anagement <b>S</b>ystem </a>
+             </div>
+         </div>
+         <div class="col-sm-3 ">
+             <nav class="navbar navbar-static-top pull-right">
+                 <ul class="nav navbar-nav">
+                     <li class="dropdown user user-menu">
+                         <a href="">
+                             <span class="hidden-xs">Welcome  username</span>
+                         </a>
+                     </li>
+                 </ul>
+                 <ul class="nav navbar-nav">
+                     <li class="dropdown user user-menu">
+                         <a href="logout.html">
+                             <span class="hidden-xs">Logout</span>
+                         </a>
+                     </li>
+                 </ul>
+             </nav>
+         </div>
+     </div>
+ </nav>
 
-    </div>
-  </div>
-</nav>
+
 
 	<table style="width:100%">
 
@@ -59,3 +83,18 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>
+<style>
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+</style>
+
+<div class="footer">
+  <p>Copyright &copy; 2017 All Rights Reserved by Hexaware Technologies Inc</p>
+</div>
