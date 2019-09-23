@@ -45,8 +45,8 @@
 			console.log(password);
 			alert("Login successful to "+dept+" department");
 			if(dept=="Accounts"){
-				//window.location.replace('Account_UI/AccountDashboard.html');
-				window.open("Account_UI/AccountDashboard.html");
+				window.location.href=('Account_UI/AccountDashboard.html');
+				//window.open("Account_UI/AccountDashboard.html");
 			}else if(dept=="RMG"){
 				window.open("RMG_UI/index.html");
 			}else if(dept=="Competency"){
@@ -99,11 +99,11 @@
 </head>
 <body  class="hold-transition skin-blue">
 <div class="container">
-	<form class="row vh-100 justify-content-center align-items-center" name="outerform">
+	<form class="row vh-100 justify-content-center align-items-center" name="outerform" method="post">
 		<div class="login-box">
 			<div class="row">
 				<div class="login-logo" >
-					<a href=""><b>R</b>ecruitment <b>M</b>anagement <b>S</b>ystem</a>
+					<a href="index.html"><b>R</b>ecruitment <b>M</b>anagement <b>S</b>ystem</a>
 				</div><!-- /.login-logo -->
 			</div><!-- /.row -->
 			<br>
