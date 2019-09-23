@@ -1,9 +1,32 @@
 <!DOCTYPE html>
 <a href="../html-link.htm"><img src="https://hexaware.com/wp-content/themes/hexaware-main/images/logo.png" style="width:150px; height:95px" alt="hexaware logo"></a>
+<div class="header" id="myHeader">
+  <h2><pre class="tab">Home    About      Mission     Contact Us     Locations</pre></h2>
+</div>
+<style type="text/css">
+  /* Style the header */
+.header {
+  padding: 10px 16px;
+  background: #555;
+  color: #f1f1f1;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
+}
+</style>
 
 <html>
 <head>
-  <title>Account Requirements</title>
+  <title>Competency requirements</title>
 <style>
 table {
   font-family: arial, sans-serif;
@@ -63,3 +86,18 @@ tr:nth-child(even) {
 
 </body>
 </html>
+<style>
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+</style>
+
+<div class="footer">
+  <p>Copyright &copy; 2017 All Rights Reserved by Hexaware Technologies Inc</p>
+</div>
