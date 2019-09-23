@@ -38,13 +38,19 @@
 			var dept=form.department.value;
 			console.log(dept);
 
+			var username=form.username.value;
+			console.log(username);
+			var password=form.password.value;
+			console.log(password);
+
+
 			alert("Login successful to "+dept+" department");
 			if(dept=="Accounts"){
 				window.open("Account_UI/AccountDashboard.html");
 			}else if(dept=="RMG"){
 				window.open("RMG_UI/index.html");
 			}else if(dept=="Competency"){
-				window.open("Competency2.html");
+				window.open("CompetencyHomePage.html");
 			}else if(dept=="Candidate"){
 				window.open("cand_home.html");
 			}else if(dept=="Recruitment"){
@@ -53,6 +59,42 @@
 				window.open("Training2.html")
 			}
 		}
+	</script>
+
+	<!--password verify-->
+	<script type="text/javascript">
+
+		function checkPassword(str)
+		{
+			// at least one number, one lowercase and one uppercase letter
+			// at least six characters
+			var re = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
+			return re.test(str);
+		}
+
+		function checkForm(form)
+		{
+			if(form.username.value == "") {
+				alert("Username cannot be blank!");
+				form.username.focus();
+				return false;
+			}
+			if(form.password.value==""){
+				alert("Password cannot be blank!");
+				form.password.focus();
+				return false;
+			}
+			else if(form.password.value != "") {
+				if(!checkPassword(form.password.value)) {
+					alert("The password you have entered is not valid! Password has:\n*at least one number\n*one lowercase\n*one uppercase letter\n and at least six characters");
+					form.password.focus();
+					return false;
+				}
+			}
+			return validateForm(form);
+		}
+
+
 	</script>
 
 
@@ -90,7 +132,7 @@
 							<div class="row">
 								<div class="col-xs-3"></div>
 								<div class="col-xs-6">
-									<button type="submit" name="btnLogin" class="btn btn-primary btn-block btn-flat" onclick="validateForm(this.form)">Login</button>
+									<button type="submit" name="btnLogin" class="btn btn-primary btn-block btn-flat" onclick="checkForm(this.form)">Login</button>
 								</div>
 								<div class="col-xs-3"></div>
 							</div><!-- /.row -->
