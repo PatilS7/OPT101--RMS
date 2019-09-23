@@ -37,13 +37,10 @@
 			//var dept=document.forms["login"]["department"].value;
 			var dept=form.department.value;
 			console.log(dept);
-
 			var username=form.username.value;
 			console.log(username);
 			var password=form.password.value;
 			console.log(password);
-
-
 			alert("Login successful to "+dept+" department");
 			if(dept=="Accounts"){
 				window.open("Account_UI/AccountDashboard.html");
@@ -63,7 +60,6 @@
 
 	<!--password verify-->
 	<script type="text/javascript">
-
 		function checkPassword(str)
 		{
 			// at least one number, one lowercase and one uppercase letter
@@ -71,7 +67,6 @@
 			var re = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
 			return re.test(str);
 		}
-
 		function checkForm(form)
 		{
 			if(form.username.value == "") {
@@ -93,8 +88,6 @@
 			}
 			return validateForm(form);
 		}
-
-
 	</script>
 
 
