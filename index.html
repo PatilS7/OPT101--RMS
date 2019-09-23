@@ -33,21 +33,19 @@
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-	<script>
+	<script type="text/javascript">
 		function validateForm(form) {
 			console.log("in validateForm");
 			//var dept=document.forms["login"]["department"].value;
 			var dept=form.department.value;
 			console.log(dept);
-
 			var username=form.username.value;
 			console.log(username);
 			var password=form.password.value;
 			console.log(password);
-
-
 			alert("Login successful to "+dept+" department");
 			if(dept=="Accounts"){
+				//window.location.replace('Account_UI/AccountDashboard.html');
 				window.open("Account_UI/AccountDashboard.html");
 			}else if(dept=="RMG"){
 				window.open("RMG_UI/index.html");
@@ -65,7 +63,6 @@
 
 	<!--password verify-->
 	<script type="text/javascript">
-
 		function checkPassword(str)
 		{
 			// at least one number, one lowercase and one uppercase letter
@@ -73,7 +70,6 @@
 			var re = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
 			return re.test(str);
 		}
-
 		function checkForm(form)
 		{
 			if(form.username.value == "") {
@@ -95,8 +91,6 @@
 			}
 			return validateForm(form);
 		}
-
-
 	</script>
 
 
@@ -112,9 +106,9 @@
 					<a href=""><b>R</b>ecruitment <b>M</b>anagement <b>S</b>ystem</a>
 				</div><!-- /.login-logo -->
 			</div><!-- /.row -->
-			</br>
+			<br>
 			<div class="login-box-body">
-				<form action="" method="post" id="loginForm"  name="login">
+				<form id="loginForm"  name="login">
 					<div class="form-group has-feedback">
 
 						<select  name="department" class="form-control" id="department">
@@ -125,11 +119,11 @@
 							<option value="Recruitment">Recruitment</option>
 							<option value="Training">Training</option>
 						</select>
-						</br>
+						<br>
 						<input type="text" class="form-control" placeholder="Username" name="username" required="">
-						</br>
+						<br>
 						<input type="password" class="form-control" placeholder="Password" name="password" required="">
-						</br>
+						<br>
 						<div class="container">
 							<div class="row">
 								<div class="col-xs-3"></div>
