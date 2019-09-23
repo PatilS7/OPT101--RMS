@@ -8,18 +8,59 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+
   </head>
   <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#"><b>R</b>ecruitment <b>M</b>anagement <b>S</b>ystem </a>
-      <a class="navbar-brand" href="RMGRequest.html">Allocate to RMG </a>
-      <a class="navbar-brand" href="RMGRequest.html">Request to RMG </a>
-    </div>
-  </div>
-</nav>
+     <div class="container-fluid">
+         <div class="navbar-header col-sm-3">
+             <div class="col-sm-4 pull-right">
+                 <a href="index.html"><img src="https://hexaware.com/wp-content/themes/hexaware-main/images/logo.png" style="width:100px; height:50px" alt="hexaware logo"></a>
+             </div>
+             <div class="col-sm-3 pull-right">
+                 <a class="navbar-brand" href="index.html"><b>R</b>ecruitment <b>M</b>anagement <b>S</b>ystem </a>
+             </div>
+         </div>
 
+
+
+
+         <div class="col-sm-3 ">
+             <nav class="navbar navbar-static-top">
+                 <ul class="nav navbar-nav">
+                     <li class="dropdown user user-menu">
+                       <a class="navbar-brand"  href="RMGRequest.html">Allocate to RMG </a>
+                     </li>
+                 </ul>
+                 <ul class="nav navbar-nav">
+                     <li class="dropdown user user-menu">
+                         <a class="navbar-brand" href="RMGRequest.html">Request to RMG </a>
+                     </li>
+                 </ul>
+             </nav>
+         </div>
+
+
+         <div class="col-sm-3 ">
+             <nav class="navbar navbar-static-top pull-right">
+                 <ul class="nav navbar-nav">
+                     <li class="dropdown user user-menu">
+                         <a href="">
+                             <span class="hidden-xs">Welcome  username</span>
+                         </a>
+                     </li>
+                 </ul>
+                 <ul class="nav navbar-nav">
+                     <li class="dropdown user user-menu">
+                         <a href="logout.html">
+                             <span class="hidden-xs">Logout</span>
+                         </a>
+                     </li>
+                 </ul>
+             </nav>
+         </div>
+     </div>
+ </nav>
 	<table style="width:100%">
 
 
@@ -29,18 +70,39 @@
 
   </tr>
   <tr>
-    <td>A1</td>
+    <td>Rock</td>
     <td>12/20/2019</td>
 
- <td><button type="submit" name="btnLogin"  style="background-color:#008000" class="btn btn-primary btn-block btn-flat"><a href="Accept.html">Accept</a></button></td>
-<td><button type="submit" name="btnLogin" style="background-color:#FF0000" class="btn btn-primary btn-block btn-flat"><a href="Reject.html">Reject</a></button></td>
+    <td><button type="submit" name="btnLogin"  style="background-color:#008000" class="btn btn-primary btn-block btn-flat"><a href="Accept.html">Accept</a></button></td>
+   <td><button type="submit" name="btnLogin" style="background-color:#FF0000" class="btn btn-primary btn-block btn-flat"><a href="Reject.html">Reject</a></button></td>
+
 
 
   </tr>
   <tr>
-    <td>A2</td>
+    <td>John</td>
     <td>12/25/2019</td>
 	<td><button type="submit" name="btnLogin"  style="background-color:#008000" class="btn btn-primary btn-block btn-flat"><a href="Accept.html">Accept</a></button></td>
+<td><button type="submit" name="btnLogin" style="background-color:#FF0000" class="btn btn-primary btn-block btn-flat"><a href="Reject.html">Reject</a></button></td>
+
+
+
+
+  </tr>
+  <tr>
+    <td>Sarah</td>
+    <td>06/25/2019</td>
+	<td><button type="submit" name="btnLogin"  style="background-color:#008000" class="btn btn-primary btn-block btn-flat"><a href="Accept.html">Accept</a></button></td>
+<td><button type="submit" name="btnLogin" style="background-color:#FF0000" class="btn btn-primary btn-block btn-flat"><a href="Reject.html">Reject</a></button></td>
+
+
+
+
+  </tr>
+  <tr>
+    <td>Joe</td>
+    <td>05/06/2019</td>
+  <td><button type="submit" name="btnLogin"  style="background-color:#008000" class="btn btn-primary btn-block btn-flat"><a href="Accept.html">Accept</a></button></td>
 <td><button type="submit" name="btnLogin" style="background-color:#FF0000" class="btn btn-primary btn-block btn-flat"><a href="Reject.html">Reject</a></button></td>
 
 
@@ -59,3 +121,18 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>
+<style>
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+</style>
+
+<div class="footer">
+  <p>Copyright &copy; 2017 All Rights Reserved by Hexaware Technologies Inc</p>
+</div>

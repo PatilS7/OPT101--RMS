@@ -1,3 +1,5 @@
+<a href="../html-link.htm"><img src="https://hexaware.com/wp-content/themes/hexaware-main/images/logo.png" style="width:150px; height:95px" alt="hexaware logo"></a>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +33,7 @@
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-	<script>
+	<script type="text/javascript">
 		function validateForm(form) {
 			console.log("in validateForm");
 			//var dept=document.forms["login"]["department"].value;
@@ -46,6 +48,7 @@
 
 			alert("Login successful to "+dept+" department");
 			if(dept=="Accounts"){
+				//window.location.href=('Account_UI/AccountDashboard.html');
 				window.open("Account_UI/AccountDashboard.html");
 			}else if(dept=="RMG"){
 				window.open("RMG_UI/index.html");
@@ -103,16 +106,16 @@
 </head>
 <body  class="hold-transition skin-blue">
 <div class="container">
-	<form class="row vh-100 justify-content-center align-items-center" name="outerform">
+	<form class="row vh-100 justify-content-center align-items-center" name="outerform" method="post">
 		<div class="login-box">
 			<div class="row">
 				<div class="login-logo" >
-					<a href=""><b>R</b>ecruitment <b>M</b>anagement <b>S</b>ystem</a>
+					<a href="index.html"><b>R</b>ecruitment <b>M</b>anagement <b>S</b>ystem</a>
 				</div><!-- /.login-logo -->
 			</div><!-- /.row -->
-			</br>
+			<br>
 			<div class="login-box-body">
-				<form action="" method="post" id="loginForm"  name="login">
+				<form id="loginForm"  name="login">
 					<div class="form-group has-feedback">
 
 						<select  name="department" class="form-control" id="department">
@@ -123,11 +126,11 @@
 							<option value="Recruitment">Recruitment</option>
 							<option value="Training">Training</option>
 						</select>
-						</br>
+						<br>
 						<input type="text" class="form-control" placeholder="Username" name="username" required="">
-						</br>
+						<br>
 						<input type="password" class="form-control" placeholder="Password" name="password" required="">
-						</br>
+						<br>
 						<div class="container">
 							<div class="row">
 								<div class="col-xs-3"></div>
@@ -154,3 +157,18 @@
 </body>
 
 </html>
+<style>
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+</style>
+
+<div class="footer">
+  <p>Copyright &copy; 2017 All Rights Reserved by Hexaware Technologies Inc</p>
+</div>
