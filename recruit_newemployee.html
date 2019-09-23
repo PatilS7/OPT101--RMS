@@ -1,35 +1,139 @@
 <a href="../html-link.htm"><img src="https://hexaware.com/wp-content/themes/hexaware-main/images/logo.png" style="width:150px; height:95px" alt="hexaware logo"></a>
-<h1>Register a New Employee here:</h1>
-<form>
+	<!DOCTYPE html>
+
+
+
+<div class="header" id="myHeader">
+  <h2><pre class="tab">Home    About      Mission     Contact Us     Locations</pre></h2>
+</div>
+<style type="text/css">
+  /* Style the header */
+.header {
+  padding: 10px 16px;
+  background: #555;
+  color: #f1f1f1;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+}
+  <h1>Register a New Employee here:</h1>
+ <small>Fields with are mandatory</small>
+</nav>
+<section class="w3-container w3-center" style="max-width:600px">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+<style type="text/css">li {list-style-type: none;
+font-size: 16pt;
+}
+.mail {
+margin: auto;
+padding-top: 10px;
+padding-bottom: 10px;
+width: 1500px;
+background : #D8F1F8;
+border: 1px soild silver;
+}
+.mail h2 {
+margin-left: 38px;
+}
+input {
+font-size: 20pt;
+}
+input:focus, textarea:focus{
+background-color: lightyellow;
+}
+input submit {
+font-size: 10pt;
+}
+.rq {
+color: #FF0000;
+font-size: 10pt;
+}</style>
+<script type="text/javascript">function required()
+{
+var empt = document.forms["form1"]["text1"].value;
+if (empt == "")
+{
+alert("Please input a Value");
+return false;
+}
+else 
+{
+alert('Congrats, Data Has been sent!');
+return true; 
+}
+}</script>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>JavaScript form validation - checking non-empty</title>
+<link rel='stylesheet' href='form-style.css' type='text/css' />
+</head>
+<body>
+<div class="mail">
+<h4><b>Input Full Name of the empoloyee</b></h4>
+<form name="form1" action="#" onsubmit="required()">
+<ul>
+<li><input type='text' name ='text1'/></li>
+<li class="rq">Required Field</li>
+
+</body>
+</html>
+<html>
+   <head>
+      <title>recruiter portal</title>
+      <style>
+         .button {
+         background-color: #1c87c9;
+         border: none;
+         color: white;
+         padding: 20px 39px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 20px;
+         margin: 4px 4px;
+         cursor: pointer;
+         }
+      </style>
+   </head>
+   <body>
+
+<!-- Content will go here -->
+<!-- Navigation -->
+
 <table border="0" cellpadding="5" cellspacing="0">
 <tr> <td style="width: 50%">
-<label for="First_Name"><b>First name *</b></label><br />
-<input name="First_Name" type="text" maxlength="50" style="width: 260px" />
-</td> <td style="width: 50%">
-<label for="Last_Name"><b>Last name *</b></label><br />
-<input name="Last_Name" type="text" maxlength="50" style="width: 260px" />
+
  <tr> <td colspan="2">
-<label for="Email_Address"><b>Email *</b></label><br />
+<label for="Email_Address"><b>Email</b></label><br />
 <input name="Email_Address" type="text" maxlength="100" style="width: 535px" />
 </td> </tr> <tr> <td colspan="2">
 <label for="Portfolio"><b>Portfolio website</b></label><br />
 <input name="Portfolio" type="text" maxlength="255" value="http://" style="width: 535px" />
 </td> </tr> <tr> <td colspan="2">
-<label for="Position"><b>Position you are applying for *</b></label><br />
+<label for="Position"><b>Position applying for </b></label><br />
 <input name="Position" type="text" maxlength="100" style="width: 535px" />
 </td> </tr> <tr> <td>
 <label for="Salary"><b>Salary requirements</b></label><br /> <input name="Salary" type="text" maxlength="50" style="width: 260px" /> </td> <td>
-<label for="StartDate"><b>When can you start?</b></label><br />
+<label for="StartDate"><b>When can he/she start?</b></label><br />
 <input name="StartDate" type="text" maxlength="50" style="width: 260px" />
 </td> </tr> <tr> <td>
-<label for="Phone"><b>Phone *</b></label><br />
+<label for="Phone"><b>Phone </b></label><br />
 <input name="Phone" type="text" maxlength="50" style="width: 260px" />
 </td> <td>
 
 </td> </tr> <tr> <td colspan="2">
-<label for="Relocate"><b>Are you willing to relocate?</b></label><br />
-<input name="Relocate" type="radio" value="Yes" checked="checked" /> Yes
-<input name="Relocate" type="radio" value="No" /> No
+<label for="Relocate"><b>Willing to relocate?</b></label><br />
+<input name="Relocate" type="radio" value="Yes" checked="checked" /> Yes      
+<input name="Relocate" type="radio" value="No" /> No      
 <input name="Relocate" type="radio" value="NotSure" /> Not sure
 </td> </tr> <tr> <td colspan="2">
 <label for="Organization"><b>Last company you worked for</b></label><br />
@@ -38,8 +142,31 @@
 <label for="Reference"><b>Reference / Comments / Questions</b></label><br />
 <textarea name="Reference" rows="7" cols="40" style="width: 535px"></textarea>
 </td> </tr> <tr> <td colspan="2" style="text-align: center;">
-  <button type="submit" class="btn btn-primary" > Send Application</button>
+
+<li><input type="submit" name="submit" value="Submit" /></li>
+</ul>
+</form>
+</div>
+<script src="non-empty.js"></script>
 
 </td> </tr>
 </table>
-</form>
+  <!-- Site footer -->
+   
+        
+     
+<style>
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+</style>
+
+<div class="footer">
+  <p>Copyright &copy; 2017 All Rights Reserved by Hexaware Technologies Inc</p>
+</div>
