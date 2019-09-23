@@ -1,37 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>RMG Login</title>
-<!-- TODO: Add css and classes -->
+	<title>RMG Home Page</title>
+
+
+	<style type="text/css">
+
+		body {
+			max-width: 500px;
+			margin: auto;
+
+			font-family: Georgia, "Times New Roman", Times, serif;
+			color: #2F4F4F;
+			background-color: #d8da3d }
+		h1 {
+			font-family: Helvetica, Geneva, Arial,
+			SunSans-Regular, sans-serif }
+		ul.navbar {
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+			position: absolute;
+			top: 2em;
+			left: 1em;
+			width: 9em }
+
+		ul.navbar li {
+			background: white;
+			margin: 0.5em 0;
+			padding: 0.3em;
+			border-right: 1em solid black }
+		ul.navbar a {
+			text-decoration: none }
+		a:link {
+			color: blue }
+		a:visited {
+			color: purple }
+	</style>
+
+
 </head>
+
 <body>
 
-	<div>
-				<form>
-					<span>
-						RMG Account Login
-					</span>
+<!-- Site navigation menu -->
+<ul class="navbar">
+	<li><a href="./rel_path/login.html">Login page</a>
+	<li><a href="./rel_path/rmg_candidateUpdate.html">Candidate Profile Update</a>
+	<li><a href="./rel_path/rmg_updatedProfileList.html">Updated Profiles</a>
+	<li><a href="./rel_path/rmg_accountRequirement.html">New Requirements</a>
+	<li><a href="./rel_path/rmg_sendCandidatesToAccount.html">Send Candidate Profiles</a>
+	<li><a href="./rel_path/rmg_candidateApplicationStatus.html">Applications Status</a>
+</ul>
 
-					<div>
-						Username
-						<input type="text" name="text">
-					</div>
+<!-- Main content -->
+<h1>Hey there!</h1>
 
-
-					<div>
-						Password
-						<input type="password" name="pass">
-					</div>
-
-						<button type="submit">
-							Sign in
-						</button>
-
-						<a href="#" class="ForgotPassword">
-							Forgot password?
-						</a>
-				</form>
-	</div>
+<p>Welcome to RMG's HomePage!!!!</p>
 
 </body>
 </html>
