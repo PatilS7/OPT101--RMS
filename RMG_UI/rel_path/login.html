@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>RMS | Recruitment</title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>RMS | Recruitment</title>
+	<!-- Tell the browser to be responsive to screen width -->
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -19,12 +19,35 @@
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
+	<script>
+		function validateForm(form) {
+			console.log("in validateForm");
+			//var dept=document.forms["login"]["department"].value;
+			var dept=form.department.value;
+			console.log(dept);
+
+			alert("Login successful to "+dept+" department");
+			if(dept=="Accounts"){
+				window.open("Account_UI/AccountDashboard.html");
+			}else if(dept=="RMG"){
+				window.open("RMG_UI/index.html");
+			}else if(dept=="Competency"){
+				window.open("Competency2.html");
+			}else if(dept=="Candidate"){
+				window.open("cand_home.html");
+			}else if(dept=="Recruitment"){
+				window.open("Rec_home.html")
+			}else{
+				window.open("Training2.html")
+			}
+		}
+	</script>
 
 
 </head>
 <body  class="hold-transition skin-blue">
 <div class="container">
-	<form class="row vh-100 justify-content-center align-items-center">
+	<form class="row vh-100 justify-content-center align-items-center" name="outerform">
 		<div class="login-box">
 			<div class="row">
 				<div class="login-logo" >
@@ -33,10 +56,10 @@
 			</div><!-- /.row -->
 			</br>
 			<div class="login-box-body">
-				<form action="" method="post" id="loginForm"  novalidate>
-          			<div class="form-group has-feedback">
+				<form action="" method="post" id="loginForm"  name="login">
+					<div class="form-group has-feedback">
 
-						<select  name="department" class="form-control" placeholder="Department" id="department">
+						<select  name="department" class="form-control" id="department">
 							<option value="Accounts">Accounts</option>
 							<option value="RMG">RMG</option>
 							<option value="Competency">Competency</option>>
@@ -45,22 +68,22 @@
 							<option value="Training">Training</option>
 						</select>
 						</br>
-           				<input type="text" class="form-control" placeholder="Username" name="username" required="">
+						<input type="text" class="form-control" placeholder="Username" name="username" required="">
 						</br>
 						<input type="password" class="form-control" placeholder="Password" name="password" required="">
 						</br>
 						<div class="container">
 							<div class="row">
-							<div class="col-xs-3"></div>
-							<div class="col-xs-6">
-                      			<button type="submit" name="btnLogin" class="btn btn-primary btn-block btn-flat">Login</button>
-							</div>
-							<div class="col-xs-3"></div>
-						</div><!-- /.row -->
-					</div><!-- /.container -->
+								<div class="col-xs-3"></div>
+								<div class="col-xs-6">
+									<button type="submit" name="btnLogin" class="btn btn-primary btn-block btn-flat" onclick="validateForm(this.form)">Login</button>
+								</div>
+								<div class="col-xs-3"></div>
+							</div><!-- /.row -->
+						</div><!-- /.container -->
 
 
-				</div>
+					</div>
 				</form>
 
 
