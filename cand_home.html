@@ -2,16 +2,28 @@
 <html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<link rel="stylesheet" href="#">
 <body>
 
 <!-- Content will go here -->
 <!-- Navigation -->
 <a href="../html-link.htm"><img src="https://hexaware.com/wp-content/themes/hexaware-main/images/logo.png" style="width:150px; height:95px" alt="hexaware logo"></a>
-<nav class="w3-bar w3-black">
-  <a href="#home" class="w3-button w3-bar-item">Home</a>
-  <a href="#contact" class="w3-button w3-bar-item">Contact</a>
-</nav>
+<div class="header" id="myHeader">
+  <h2><pre class="tab">Home    About      Mission     Contact Us     Locations</pre></h2>
+</div>
+<style type="text/css">
+  /* Style the header */
+.header {
+  padding: 10px 16px;
+  background: #555;
+  color: #f1f1f1;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
 <section class="w3-container w3-center" style="max-width:600px">
   <h2 class="w3-wide">Hexaware Candidate Portal</h2>
  
@@ -20,7 +32,7 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <title>Title of the document</title>
+      <title>candidate portal</title>
       <style>
          .button {
          background-color: #1c87c9;
@@ -37,11 +49,27 @@
       </style>
    </head>
    <body>
-      <a href="index.html" class="button">Candidate Login</a><br></br>
+      <a href="cand_login.html" class="button">Candidate Login</a><br></br>
       <a href="Cand_status.html" class="button">View Application Status</a><br></br>
       
       <a href="Cand_profile.html" class="button">View My Profile</a> <br></br>
       
 
 </body>
+
 </html>
+<style>
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+</style>
+
+<div class="footer">
+  <p>Copyright &copy; 2017 All Rights Reserved by Hexaware Technologies Inc</p>
+</div>
