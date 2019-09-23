@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>RMS | Recruitment</title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>RMS | Recruitment</title>
+	<!-- Tell the browser to be responsive to screen width -->
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -34,32 +34,33 @@
 			</br>
 			<div class="login-box-body">
 				<form action="" method="post" id="loginForm"  novalidate>
-          		<div class="form-group has-feedback">
-					<input list="department" class="form-control" placeholder="Department">
-					<datalist id="department">
-						<option value="Accounts">
-						<option value="RMG">
-						<option value="Competency">
-						<option value="Candidate">
-						<option value="Recruitment">
-						<option value="Training">
-					</datalist>
-					</br>
-           			<input type="text" class="form-control" placeholder="Username" name="username" required="">
-					</br>
-					<input type="password" class="form-control" placeholder="Password" name="password" required="">
-					</br>
-					<div class="container>
-						<div class="row">
-							<div class="col-xs-3"></div>
-							<div class="col-xs-6">
-                      			<button type="submit" name="btnLogin" class="btn btn-primary btn-block btn-flat">Login</button>
-							</div>
-							<div class="col-xs-3"></div>
-						</div><!-- /.row -->
-					</div><!-- /.container -->
+					<div class="form-group has-feedback">
 
-				</div>
+						<select  name="department" class="form-control" placeholder="Department" id="department">
+							<option value="Accounts">Accounts</option>
+							<option value="RMG">RMG</option>
+							<option value="Competency">Competency</option>>
+							<option value="Candidate">Candidate</option>
+							<option value="Recruitment">Recruitment</option>
+							<option value="Training">Training</option>
+						</select>
+						</br>
+						<input type="text" class="form-control" placeholder="Username" name="username" required="">
+						</br>
+						<input type="password" class="form-control" placeholder="Password" name="password" required="">
+						</br>
+						<div class="container">
+							<div class="row">
+								<div class="col-xs-3"></div>
+								<div class="col-xs-6">
+									<button type="submit" name="btnLogin" class="btn btn-primary btn-block btn-flat">Login</button>
+								</div>
+								<div class="col-xs-3"></div>
+							</div><!-- /.row -->
+						</div><!-- /.container -->
+
+
+					</div>
 				</form>
 
 
@@ -67,31 +68,8 @@
 			</div><!-- /.login-box-body -->
 
 		</div><!-- /.login-box -->
+	</form>
 </div><!-- /.container -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div><!-- /.container -->
-
 
 
 </body>
