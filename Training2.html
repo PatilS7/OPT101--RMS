@@ -12,69 +12,116 @@
   </head>
   <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
-     <div class="container-fluid">
-         <div class="navbar-header col-sm-3">
-             <div class="col-sm-4 pull-right">
-                 <a href="index.html"><img src="https://hexaware.com/wp-content/themes/hexaware-main/images/logo.png" style="width:100px; height:50px" alt="hexaware logo"></a>
-             </div>
-             <div class="col-sm-3 pull-right">
-                 <a class="navbar-brand" href="index.html"><b>R</b>ecruitment <b>M</b>anagement <b>S</b>ystem </a>
-             </div>
-         </div>
-         <div class="col-sm-3 ">
-             <nav class="navbar navbar-static-top pull-right">
-                 <ul class="nav navbar-nav">
-                     <li class="dropdown user user-menu">
-                         <a href="">
-                             <span class="hidden-xs">Welcome  username</span>
-                         </a>
-                     </li>
-                 </ul>
-                 <ul class="nav navbar-nav">
-                     <li class="dropdown user user-menu">
-                         <a href="logout.html">
-                             <span class="hidden-xs">Logout</span>
-                         </a>
-                     </li>
-                 </ul>
-             </nav>
-         </div>
-     </div>
- </nav>
+        <div class="container-fluid">
+            <div class="navbar-header col-sm-3">
+                <div class="col-sm-4 pull-right">
+                    <a href="index.html"><img src="https://hexaware.com/wp-content/themes/hexaware-main/images/logo.png" style="width:100px; height:50px" alt="hexaware logo"></a>
+                </div>
+                <div class="col-sm-3 pull-right">
+                    <a class="navbar-brand" href="index.html"><b>R</b>ecruitment <b>M</b>anagement <b>S</b>ystem </a>
+                </div>
+            </div>
+            <div class="col-sm-3 ">
+                <nav class="navbar navbar-static-top pull-right">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown user user-menu">
+                            <a href="">
+                                <span class="hidden-xs">Welcome  username</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown user user-menu">
+                            <a href="logout.html">
+                                <span class="hidden-xs">Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </nav>
 
 
 
-	<table style="width:100%">
+   <div id="box-body">
+       <div class="row">
+         <div class="table-responsive">
+         <div class="box-header with-border">
+
+             <div class="container">
+             <h3 class="box-title"><strong>Welcome to Training Portal!!!</strong></h3>
+
+       </div>
+       </div>
+           <table class="table table-bordered table-hover dataTable pull-center">
+
+               <colgroup>
+                   <col span="1" style="width: 2%;">
+                   <col span="1" style="width: 20%;">
+                   <col span="1" style="width: 20%;">
+                   <col span="1" style="width: 20%;">
+                   <col span="1" style="width: 20%;">
+               </colgroup>
+
+               <thead>
+               <tr>
+                   <th style="text-align: center;">Candidate Id</th>
+                   <th style="text-align: center;">Candidate Name</th>
+                   <th style="text-align: center;">Status</th>
+                   <th style="text-align: center;">Action</th>
+
+               </tr>
+               </thead>
+
+               <tbody>
+               <tr class="odd gradeX" align="justify">
+                 <td>C009</td>
+                 <td>Joseph</td>
+                 <td>In Process</td>
+
+                <td style="float: center"><a href=" " class="btn btn-success"> Forward to Competency </a> </td>
+
+               </tr>
+
+               <tr class="odd gradeX" align="justify">
+                 <td>C005</td>
+                 <td>Katy</td>
+                 <td>Complete</td>
+
+                <td style="float: center"><a href=" " class="btn btn-success"> Forward to Competency </a> </td>
+
+               </tr>
+
+               <tr class="odd gradeX" align="justify">
+                 <td>C006</td>
+                 <td>Lisa</td>
+                 <td>Incomplete</td>
+
+                <td style="float: center"><a href=" " class="btn btn-success"> Forward to Competency </a> </td>
+
+               </tr>
 
 
-  <tr>
-    <th>Candidate List</th>
-    <th>Status</th>
+               </tbody>
+           </table>
+</div>
+       </div>
+   </div>
 
-  </tr>
-  <tr>
-    <td>A1</td>
-    <td>In Process</td>
-    <td> <button style="background-color:#008000" class="btn btn-primary btn-block btn-flat" type="button"><a href="#">Forward to Competency</a></button>
-       <td> <button style="background-color:#FF0000"  class="btn btn-primary btn-block btn-flat" type="button">Hold</button></td>
+   <div class="container vh-100">
+   <div>
 
-  </tr>
-  <tr>
-    <td>A2</td>
-    <td>Completed</td>
-	<td> <button style="background-color:#008000" class="btn btn-primary btn-block btn-flat" type="button"><a href="#">Forward to Competency</a></button></td>
-  <td> <button style="background-color:#FF0000" class="btn btn-primary btn-block btn-flat" type="button">Hold</button></td>
 
-  </tr>
-   <tr>
-    <td>A3</td>
-    <td>InComplete</td>
-  <td> <button style="background-color:#008000" class="btn btn-primary btn-block btn-flat" type="button"><a href="#">Forward to Competency</a></button></td>
-  <td> <button style="background-color:#FF0000" class="btn btn-primary btn-block btn-flat" type="button">Hold</button></td>
+   							<div class="col-xs-6">
 
-  </tr>
-</table>
+             		<button type="submit" name="btnLogin" class="btn btn-primary btn-block btn-flat href="CompetencyHomePage.html">Back</button>
 
+                 </div>
+   							<div class="col-xs-3">
+   </div>
+   						</div><!-- /.row -->
+   					</div><!-- /.container -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -83,6 +130,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>
+
 <style>
 .footer {
   position: fixed;

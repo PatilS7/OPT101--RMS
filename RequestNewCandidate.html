@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Accounts | New Request </title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+
+</head>
+<body  class="hold-transition skin-blue">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header col-sm-3">
+            <div class="col-sm-4 pull-right">
+                <a href="index.html"><img src="https://hexaware.com/wp-content/themes/hexaware-main/images/logo.png" style="width:100px; height:50px" alt="hexaware logo"></a>
+            </div>
+            <div class="col-sm-3 pull-right">
+                <a class="navbar-brand" href="index.html"><b>R</b>ecruitment <b>M</b>anagement <b>S</b>ystem </a>
+            </div>
+        </div>
+        <div class="col-sm-3 ">
+            <nav class="navbar navbar-static-top pull-right">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown user user-menu">
+                        <a href="">
+                            <span class="hidden-xs">Welcome  username</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li class="dropdown user user-menu">
+                        <a href="logout.html">
+                            <span class="hidden-xs">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+<!-- This is accounts dashboard page.-->
+<br>
+<div class="container">
+
+    <div class="row">
+        <div class="col-2">
+        </div>
+        <div class="col-8 text-center">
+        </div>
+
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="container">
+            <br>
+            <div class="box-header with-border">
+                <h3 class="box-title"><strong>Create a New  Candidate Request</strong></h3>
+            </div>
+            <!-- form start -->
+            <form role="form" method="post" id="requestRequestForm" name="request_insert">
+
+                <div id ="formSuccess" class="alert alert-success" style="display:none">Data Successfully Stored!!</div>
+                <div class="box-body">
+                    <div class="form-group">
+                        <label for="requirementId">Job Id<strong>*</strong></label>
+                        <input type="text" class="form-control" id="requirementId" name = "requirement"  placeholder="Enter Requirement Id" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="jobTitle">Client<strong>*</strong></label>
+                        <input type="text" class="form-control" id="jobTitle" name = "title"  placeholder="Enter Job Title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="experience_required">Experience Required<strong>*</strong></label>
+                        <input type="number" min="0.00" step="0.5" class="form-control" id="experience_required" name = "experience"  placeholder="Enter the required experience" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comment">Location<strong>*</strong></label>
+                        <input type="text" class="form-control" id="comment" name = "comment"  placeholder="Enter additional comment" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="comment">Experience Required<strong>*</strong></label>
+                        <input type="text" class="form-control" id="comment" name = "comment"  placeholder="Enter additional comment" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="comment">Key Technologies<strong>*</strong></label>
+                        <input type="text" class="form-control" id="comment" name = "comment"  placeholder="Enter additional comment" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="comment">Job Title<strong>*</strong></label>
+                        <input type="text" class="form-control" id="comment" name = "comment"  placeholder="Enter additional comment" required>
+                    </div>
+                </div><!-- /.box-body -->
+                <input type="hidden" class="form-control" name = "action" value="request_candidate">
+                <div class="box-footer">
+                    <button type="submit" class="btn btn-primary">Request Candidate</button>
+                    <button type="reset" class="btn btn-danger pull-right">Reset Data</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
