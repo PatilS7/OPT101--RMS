@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 <head>
     <title>Profile Update</title>
     <style>
@@ -18,13 +21,65 @@
         tr:nth-child(even) {
             background-color: #dddddd;
         }
+
+        tr:hover {
+            background-color: #a1a099;
+        }
+
+        .notify:hover {
+            background-color: #b3b3ad;
+        }
     </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        function deletefn(x) {
+            notify();
+            var i = x.parentNode.parentNode.rowIndex;
+            document.getElementById("table1").deleteRow(i);
+        }
+        function notify() {
+            alert("Candidate Notified!!!")
+        }
+    </script>
+
 </head>
 <body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header col-sm-3">
+            <div class="col-sm-4 pull-right">
+                <a href="index.html"><img src="https://hexaware.com/wp-content/themes/hexaware-main/images/logo.png" style="width:100px; height:50px" alt="hexaware logo"></a>
+            </div>
+            <div class="col-sm-3 pull-right">
+                <a class="navbar-brand" href="index.html"><b>R</b>ecruitment <b>M</b>anagement <b>S</b>ystem </a>
+            </div>
+        </div>
+        <div class="col-sm-3 ">
+            <nav class="navbar navbar-static-top pull-right">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown user user-menu">
+                        <a href="">
+                            <span class="hidden-xs">Welcome  username</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li class="dropdown user user-menu">
+                        <a href="logout.html">
+                            <span class="hidden-xs">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</nav>
 
 <h2>Candidate Profile Update Page</h2>
 
-<table>
+<table id="table1" class="table table-bordered">
+ <thead class="thead-light">
     <tr>
         <th>Account</th>
         <th>Candidate_Name</th>
@@ -32,29 +87,46 @@
         <th>Last Day</th>
         <th>Update Profile</th>
     </tr>
+ </thead>
     <tr>
         <td>Tesla</td>
         <td>Raj Rao</td>
         <td>11111</td>
         <td>10/10/2019</td>
-        <td><button class="nontify">notify</button> </td>
+        <td><button class="notify" onclick="deletefn(this)">notify</button> </td>
     </tr>
     <tr>
         <td>BMW</td>
         <td>Ajit Atwal</td>
         <td>22222</td>
         <td>15/11/2019</td>
-        <td><button class="nontify">notify</button> </td>
+        <td><button class="notify" onclick="deletefn(this)">notify</button> </td>
     </tr>
     <tr>
         <td>Snapchat</td>
         <td>Dev Nandan</td>
         <td>33333</td>
         <td>23/11/2019</td>
-        <td><button class="nontify">notify</button> </td>
+        <td><button class="notify" onclick="deletefn(this)">notify</button> </td>
     </tr>
     </tr>
 </table>
 
+
+<style>
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: red;
+        color: white;
+        text-align: center;
+    }
+</style>
+
+<div class="footer">
+    <p>Copyright &copy; 2019 All Rights Reserved by Hexaware Technologies Inc</p>
+</div>
 </body>
 </html>

@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 <head>
     <title>Send Candidates to Account</title>
     <style>
@@ -18,38 +20,111 @@
         tr:nth-child(even) {
             background-color: #dddddd;
         }
+
+        tr:hover {
+            background-color: #a1a099;
+        }
+
+        .view:hover{
+            background-color: #b3b3ad;
+        }
+
+        .forward_requirement:hover{
+            background-color: #88f27e;
+        }
+
     </style>
+
+    <script>
+        function vieww() {
+            console.log("view clicked")
+            location.href = "viewPage.html"
+        }
+
+        function deletefn(x) {
+            alert("Forward Successful!!!");
+            var i = x.parentNode.parentNode.rowIndex;
+            document.getElementById("table1").deleteRow(i);
+        }
+    </script>
 </head>
 <body>
-
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header col-sm-3">
+            <div class="col-sm-4 pull-right">
+                <a href="index.html"><img src="https://hexaware.com/wp-content/themes/hexaware-main/images/logo.png" style="width:100px; height:50px" alt="hexaware logo"></a>
+            </div>
+            <div class="col-sm-3 pull-right">
+                <a class="navbar-brand" href="index.html"><b>R</b>ecruitment <b>M</b>anagement <b>S</b>ystem </a>
+            </div>
+        </div>
+        <div class="col-sm-3 ">
+            <nav class="navbar navbar-static-top pull-right">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown user user-menu">
+                        <a href="">
+                            <span class="hidden-xs">Welcome  username</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li class="dropdown user user-menu">
+                        <a href="logout.html">
+                            <span class="hidden-xs">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</nav>
 <h2>Send candidates to Accounts</h2>
 
-<table>
+<table id="table1" class="table table-bordered">
+    <thead class="thead-light">
     <tr>
         <th>Requirement_ID</th>
         <th>Candidate_Name</th>
         <th>View_Resume</th>
         <th>Forward_To_Account</th>
     </tr>
+    </thead>
     <tr>
         <td>ATT111</td>
         <td>Aaron Finch</td>
-        <td><button class="view">View</button></td>
-        <td><button class="forward_requirement">Forward_Requirement</button></td>
+        <td><button class="view"  onclick="vieww()">View</button></td>
+        <td><button class="forward_requirement" onclick="deletefn(this)">Forward_Requirement</button></td>
     </tr>
     <tr>
         <td>TSL111</td>
         <td>Virat Kohli</td>
-        <td><button class="view">View</button></td>
-        <td><button class="forward_requirement">Forward_Requirement</button></td>
+        <td><button class="view" onclick="vieww()">View</button></td>
+        <td><button class="forward_requirement" onclick="deletefn(this)">Forward_Requirement</button></td>
     </tr>
     <tr>
         <td>ATT222</td>
-        <td>SHane Watson</td>
-        <td><button class="view">View</button></td>
-        <td><button class="forward_requirement">Forward_Requirement</button></td>
+        <td>Shane Watson</td>
+        <td><button class="view" onclick="vieww()">View</button></td>
+        <td><button class="forward_requirement" onclick="deletefn(this)">Forward_Requirement</button></td>
     </tr>
 </table>
 
+
+<style>
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: red;
+        color: white;
+        text-align: center;
+    }
+</style>
+
+<div class="footer">
+    <p>Copyright &copy; 2019 All Rights Reserved by Hexaware Technologies Inc</p>
+</div>
 </body>
 </html>

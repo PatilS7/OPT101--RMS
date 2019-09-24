@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <head>
     <title>Account Requirements</title>
+
     <style>
         table {
             font-family: arial, sans-serif;
@@ -18,13 +21,66 @@
         tr:nth-child(even) {
             background-color: #dddddd;
         }
+
+        tr:hover {
+            background-color: #a1a099;
+        }
+
+        .forward_requirement:hover {
+            background-color: #b3b3ad;
+        }
     </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $("tr").click(function(){
+                $(this).hide();
+                notify();
+            });
+        });
+        function notify() {
+            alert("Forwarded Profile!!!")
+        }
+    </script>
+
 </head>
 <body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header col-sm-3">
+            <div class="col-sm-4 pull-right">
+                <a href="index.html"><img src="https://hexaware.com/wp-content/themes/hexaware-main/images/logo.png" style="width:100px; height:50px" alt="hexaware logo"></a>
+            </div>
+            <div class="col-sm-3 pull-right">
+                <a class="navbar-brand" href="index.html"><b>R</b>ecruitment <b>M</b>anagement <b>S</b>ystem </a>
+            </div>
+        </div>
+        <div class="col-sm-3 ">
+            <nav class="navbar navbar-static-top pull-right">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown user user-menu">
+                        <a href="">
+                            <span class="hidden-xs">Welcome  username</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li class="dropdown user user-menu">
+                        <a href="logout.html">
+                            <span class="hidden-xs">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</nav>
 
 <h2>New Consultant requirements from Accounts</h2>
 
-<table>
+<table  class="table table-bordered">
+    <thead class="thead-light">
     <tr>
         <th>Account_Name</th>
         <th>Job Title</th>
@@ -34,6 +90,7 @@
         <th>Comments</th>
         <th>Forward_To_Competency</th>
     </tr>
+    </thead>
     <tr>
         <td>ATT</td>
         <td>Software Developer</td>
@@ -82,4 +139,20 @@
 </table>
 
 </body>
+
+<style>
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: red;
+        color: white;
+        text-align: center;
+    }
+</style>
+
+<div class="footer">
+    <p>Copyright &copy; 2019 All Rights Reserved by Hexaware Technologies Inc</p>
+</div>
 </html>
