@@ -19,8 +19,6 @@
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-
-
 	<title>Title</title>
 </head>
 <body>
@@ -55,8 +53,12 @@
 	</header>
 </header>
 
-<nav class="navbar navbar-expand-sm bg-primary navbar-light" >
-	<ul class="nav navbar-nav">
+<!--<nav class="navbar navbar-expand-sm bg-primary navbar-light" >
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarText">
+	<ul class="nav navbar-nav mr-auto">
 		<li class="nav-item active"><a class="nav-link"  href="./../index.html">Login</a></li>
 		<li class="nav-item active"><a class="nav-link"  href="./index.html">Home</a></li>
 		<li class="nav-item active"><a class="nav-link"  href="./rel_path/rmg_candidateUpdate.html">Candidate Profile Update</a></li>
@@ -65,7 +67,29 @@
 		<li class="nav-item active"><a class="nav-link"  href="./rel_path/rmg_sendCandidatesToAccount.html">Send Candidate Profiles</a></li>
 		<li class="nav-item active"><a class="nav-link"  href="./rel_path/rmg_candidateApplicationStatus.html">Applications Status</a></li>
 	</ul>
+	</div>
+</nav>-->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+	<a class="navbar-brand" href="./../index.html">Login</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarText">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item active">
+				<a class="nav-link" href="./index.html">Home<span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item"><a class="nav-link"  href="./rel_path/rmg_candidateUpdate.html">Candidate Profile Update</a></li>
+			<li class="nav-item"><a class="nav-link"  href="./rel_path/rmg_updatedProfileList.html">Updated Profiles</a></li>
+			<li class="nav-item"><a class="nav-link"  href="./rel_path/rmg_accountRequirement.html">New Requirements</a></li>
+			<li class="nav-item"><a class="nav-link"  href="./rel_path/rmg_sendCandidatesToAccount.html">Send Candidate Profiles</a></li>
+			<li class="nav-item"><a class="nav-link"  href="./rel_path/rmg_candidateApplicationStatus.html">Applications Status</a></li>
+		</ul>
+	</div>
 </nav>
+
 <br><br><br><br><br>
 <h1 style="font-size:80px">Welcome to RMG's Home Page!</h1>
 </body>
