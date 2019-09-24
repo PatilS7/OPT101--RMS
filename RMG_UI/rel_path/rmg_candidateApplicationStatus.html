@@ -2,6 +2,38 @@
 <html>
 <head>
     <title>Application Status</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        function deletefn(x) {
+          if(x.className==="pending"){
+              console.log("pending");
+              alert("###Pending application cant be deleted###");
+          };
+            if(x.className==="accepted"){
+
+                console.log("accepted");
+                alert("Successful!!!");
+                var i = x.parentNode.parentNode.rowIndex;
+                document.getElementById("table1").deleteRow(i);
+
+            };
+            if(x.className==="rejected"){
+                console.log("rejected");
+                alert("Successful!!!");
+                var i = x.parentNode.parentNode.rowIndex;
+                document.getElementById("table1").deleteRow(i);
+            };
+        }
+
+    </script>
+
     <style>
         table {
             font-family: arial, sans-serif;
@@ -18,14 +50,54 @@
         tr:nth-child(even) {
             background-color: #dddddd;
         }
+
+        tr:hover {
+            background-color: #a1a099;
+        }
+
+        .pending:hover, .rejected:hover, .accepted:hover{
+            background-color: #ff4726;
+
+        }
     </style>
 </head>
 <body>
-
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header col-sm-3">
+            <div class="col-sm-4 pull-right">
+                <a href="index.html"><img src="https://hexaware.com/wp-content/themes/hexaware-main/images/logo.png" style="width:100px; height:50px" alt="hexaware logo"></a>
+            </div>
+            <div class="col-sm-3 pull-right">
+                <a class="navbar-brand" href="index.html"><b>R</b>ecruitment <b>M</b>anagement <b>S</b>ystem </a>
+            </div>
+        </div>
+        <div class="col-sm-3 ">
+            <nav class="navbar navbar-static-top pull-right">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown user user-menu">
+                        <a href="">
+                            <span class="hidden-xs">Welcome  username</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li class="dropdown user user-menu">
+                        <a href="logout.html">
+                            <span class="hidden-xs">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</nav>
+<br><br><br><br>
 <h2>Candidate Application Status</h2>
 <p style="color:red;">***Delete button only works once the status changes to accept or reject</p>
 
-<table>
+<table class="table table-bordered" id="table1">
+    <thead class="thead-light">
     <tr>
         <th>Requirement_ID</th>
         <th>Account_Name</th>
@@ -34,31 +106,51 @@
         <th>Status</th>
         <th>RemoveFromList</th>
     </tr>
-    <tr>
-        <td>ATT111</td>
-        <td>ATT</td>
-        <td>Sheldon Cooper</td>
-        <td>12345</td>
-        <td>Pending</td>
-        <td><button class="delete">delete</button></td>
-    </tr>
+    </thead>
     <tr>
         <td>TSL111</td>
         <td>TSL</td>
         <td>Chandler Bing</td>
         <td>54321</td>
         <td>Accepted</td>
-        <td><button class="delete">delete</button></td>
+        <td><button class="accepted" onclick="deletefn(this)">delete</button></td>
     </tr>
     <tr>
-        <td>ATT222</td>
+        <td>ATT111</td>
+        <td>ATT</td>
+        <td>Sheldon Cooper</td>
+        <td>12345</td>
+        <td>Pending</td>
+        <td><button class="pending" onclick="deletefn(this)">delete</button></td>
+    </tr>
+    <tr>
+        <td>FRD222</td>
         <td>ATT</td>
         <td>Pam Beesley</td>
         <td>66666</td>
         <td>Rejected</td>
-        <td><button class="delete">delete</button></td>
+        <td><button class="rejected" onclick="deletefn(this)">delete</button></td>
     </tr>
 </table>
 
+
+
+<style>
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: red;
+        color: white;
+        text-align: center;
+    }
+</style>
+
+<div class="footer">
+    <p>Copyright &copy; 2019 All Rights Reserved by Hexaware Technologies Inc</p>
+</div>
 </body>
+
+
 </html>

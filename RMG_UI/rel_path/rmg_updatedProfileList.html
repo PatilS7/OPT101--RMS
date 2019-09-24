@@ -2,6 +2,34 @@
 <html>
 <head>
     <title>Updated List</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+    <script>
+        $(function(){
+            $("#cb1, #cb2, #cb3").on('click',function() {
+                showForwardAlert()
+                $(this).hide();
+                $("#hidden-div").show();
+            });
+        });
+
+        function showForwardAlert() {
+            alert("Forwarded successfully!")
+        }
+        function showAlert() {
+            alert("Resent profile for updation!!!")
+        }
+        function vieww() {
+            location.href = "viewPage.html"
+        }
+
+    </script>
+
     <style>
         table {
             font-family: arial, sans-serif;
@@ -18,38 +46,112 @@
         tr:nth-child(even) {
             background-color: #dddddd;
         }
+
+        .alert{
+            display: none;
+        }
+
+        tr:hover {
+            background-color: #a1a099;
+        }
+
+        .view:hover {
+            background-color: #b3b3ad;
+        }
+
+        .forward:hover{
+            background-color: #88f27e;
+        }
+
+        .resend:hover{
+            background-color: #ff4726;
+        }
+
+
+
+
     </style>
+
 </head>
 <body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header col-sm-3">
+            <div class="col-sm-4 pull-right">
+                <a href="index.html"><img src="https://hexaware.com/wp-content/themes/hexaware-main/images/logo.png" style="width:100px; height:50px" alt="hexaware logo"></a>
+            </div>
+            <div class="col-sm-3 pull-right">
+                <a class="navbar-brand" href="index.html"><b>R</b>ecruitment <b>M</b>anagement <b>S</b>ystem </a>
+            </div>
+        </div>
+        <div class="col-sm-3 ">
+            <nav class="navbar navbar-static-top pull-right">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown user user-menu">
+                        <a href="">
+                            <span class="hidden-xs">Welcome  username</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li class="dropdown user user-menu">
+                        <a href="logout.html">
+                            <span class="hidden-xs">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</nav>
 
 <h2>Updated Profile List of Candidates</h2>
 
-<table>
+<table class="table table-bordered">
+    <thead class="thead-light">
     <tr>
         <th>Candidate_Name</th>
         <th>Candidate_ID</th>
         <th>View Profile</th>
         <th>Action</th>
     </tr>
+    </thead>
     <tr>
         <td>Raj Rao</td>
         <td>11111</td>
-        <td><button class="view">view</button></td>
-        <td><button class="forward">forward</button> <button class="resend">re-send</button></td>
+        <td><button class="view" onclick="vieww()">view</button></td>
+        <td><button id="cb1" class="forward">forward</button> <button class="resend" onclick="showAlert();">re-send</button></td>
+
     </tr>
     <tr>
         <td>Ajit Atwal</td>
         <td>22222</td>
-        <td><button class="view">view</button></td>
-        <td><button class="forward">forward</button> <button class="resend">re-send</button></td>
+        <td><button class="view"  onclick="vieww()">view</button></td>
+        <td><button id="cb2" class="forward">forward</button> <button class="resend" onclick="showAlert();">re-send</button></td>
     </tr>
     <tr>
         <td>Dev Nandan</td>
         <td>33333</td>
-        <td><button class="view">view</button></td>
-        <td><button class="forward">forward</button> <button class="resend">re-send</button></td>
+        <td><button class="view"  onclick="vieww()">view</button></td>
+        <td><button id="cb3" class="forward">forward</button> <button class="resend" onclick="showAlert();">re-send</button></td>
     </tr>
 </table>
 
+
+<style>
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: red;
+        color: white;
+        text-align: center;
+    }
+</style>
+
+<div class="footer">
+    <p>Copyright &copy; 2019 All Rights Reserved by Hexaware Technologies Inc</p>
+</div>
 </body>
 </html>
