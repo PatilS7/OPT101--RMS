@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 <head>
     <title>Send Candidates to Account</title>
     <style>
@@ -18,7 +20,33 @@
         tr:nth-child(even) {
             background-color: #dddddd;
         }
+
+        tr:hover {
+            background-color: #a1a099;
+        }
+
+        .view:hover{
+            background-color: #b3b3ad;
+        }
+
+        .forward_requirement:hover{
+            background-color: #88f27e;
+        }
+
     </style>
+
+    <script>
+        function vieww() {
+            console.log("view clicked")
+            location.href = "viewPage.html"
+        }
+
+        function deletefn(x) {
+            alert("Forward Successful!!!");
+            var i = x.parentNode.parentNode.rowIndex;
+            document.getElementById("table1").deleteRow(i);
+        }
+    </script>
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -53,30 +81,32 @@
 </nav>
 <h2>Send candidates to Accounts</h2>
 
-<table>
+<table id="table1" class="table table-bordered">
+    <thead class="thead-light">
     <tr>
         <th>Requirement_ID</th>
         <th>Candidate_Name</th>
         <th>View_Resume</th>
         <th>Forward_To_Account</th>
     </tr>
+    </thead>
     <tr>
         <td>ATT111</td>
         <td>Aaron Finch</td>
-        <td><button class="view">View</button></td>
-        <td><button class="forward_requirement">Forward_Requirement</button></td>
+        <td><button class="view"  onclick="vieww()">View</button></td>
+        <td><button class="forward_requirement" onclick="deletefn(this)">Forward_Requirement</button></td>
     </tr>
     <tr>
         <td>TSL111</td>
         <td>Virat Kohli</td>
-        <td><button class="view">View</button></td>
-        <td><button class="forward_requirement">Forward_Requirement</button></td>
+        <td><button class="view" onclick="vieww()">View</button></td>
+        <td><button class="forward_requirement" onclick="deletefn(this)">Forward_Requirement</button></td>
     </tr>
     <tr>
         <td>ATT222</td>
-        <td>SHane Watson</td>
-        <td><button class="view">View</button></td>
-        <td><button class="forward_requirement">Forward_Requirement</button></td>
+        <td>Shane Watson</td>
+        <td><button class="view" onclick="vieww()">View</button></td>
+        <td><button class="forward_requirement" onclick="deletefn(this)">Forward_Requirement</button></td>
     </tr>
 </table>
 

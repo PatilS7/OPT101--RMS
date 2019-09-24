@@ -21,17 +21,25 @@
         tr:nth-child(even) {
             background-color: #dddddd;
         }
+
+        tr:hover {
+            background-color: #a1a099;
+        }
+
+        .notify:hover {
+            background-color: #b3b3ad;
+        }
     </style>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
-        $(document).ready(function(){
-            $("tr").click(function(){
-                $(this).hide();
-            });
-        });
+        function deletefn(x) {
+            notify();
+            var i = x.parentNode.parentNode.rowIndex;
+            document.getElementById("table1").deleteRow(i);
+        }
         function notify() {
-            alert("Notified!!!")
+            alert("Candidate Notified!!!")
         }
     </script>
 
@@ -67,9 +75,10 @@
         </div>
     </div>
 </nav>
+
 <h2>Candidate Profile Update Page</h2>
 
-<table class="table table-bordered">
+<table id="table1" class="table table-bordered">
  <thead class="thead-light">
     <tr>
         <th>Account</th>
@@ -84,21 +93,21 @@
         <td>Raj Rao</td>
         <td>11111</td>
         <td>10/10/2019</td>
-        <td><button class="nontify" onclick=notify()>notify</button> </td>
+        <td><button class="notify" onclick="deletefn(this)">notify</button> </td>
     </tr>
     <tr>
         <td>BMW</td>
         <td>Ajit Atwal</td>
         <td>22222</td>
         <td>15/11/2019</td>
-        <td><button class="nontify"  onclick=notify()>notify</button> </td>
+        <td><button class="notify" onclick="deletefn(this)">notify</button> </td>
     </tr>
     <tr>
         <td>Snapchat</td>
         <td>Dev Nandan</td>
         <td>33333</td>
         <td>23/11/2019</td>
-        <td><button class="nontify"  onclick=notify()>notify</button> </td>
+        <td><button class="notify" onclick="deletefn(this)">notify</button> </td>
     </tr>
     </tr>
 </table>
